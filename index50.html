@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ecovis Design Example</title>
+    <!-- Bootstrap 3 CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles to match Ecovis design aesthetics -->
+    <style>
+        /* General Layout */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .navbar {
+            background-color: #e30613;
+            border-radius: 0;
+            border: none;
+        }
+        .navbar-brand, .navbar-nav li a {
+            color: #fff !important;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .navbar-nav li a:hover {
+            background-color: #b50000 !important;
+        }
+        .jumbotron {
+            background-color: #ffffff;
+            padding: 0px !important;
+            text-align: center;
+            border-bottom: 4px solid #e30613;
+            background:url("https://www2.deloitte.com/content/dam/Deloitte/us/Images/Showcase/2024-holiday-retail-survey.png");
+            background-size: cover;
+        }
+        h1, h2 {
+            font-weight: 700;
+            color: #e30613;
+        }
+        .btn-custom {
+            background-color: #e30613;
+            color: #fff;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #b50000;
+        }
+        .section-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #fff;
+        }
+
+        /* Flexbox styling to ensure full height of the red-back column */
+        .jumbotron .row {
+            display: flex;
+            align-items: stretch; /* Make children (columns) fill the height */
+        }
+
+        .red-back {
+            background-color: #CD1432;
+            height: 100%; /* Set the red-back div to fill its parent */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            color: white;
+        }
+
+        /* Custom Button */
+        .btn-custom {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+            color: #fff;
+        }
+
+        .btn-custom:hover {
+            background-color: #45a049;
+            border-color: #45a049;
+        }
+
+        /* Ecovis specific colors */
+        .jumbotron {
+            background-color: #8d0d14; /* Ecovis primary color */
+            color: white;
+        }
+
+        .jumbotron h1 {
+            font-size: 3.2em;
+            font-weight: bold;
+        }
+
+        .jumbotron p {
+            font-size: 1.2em;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .jumbotron h1 {
+                font-size: 28px;
+            }
+
+            /* Adjust red-back height for mobile, if needed */
+            .red-back {
+                height: auto;
+                padding: 20px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">ECOVIS</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="jumbotron" style="background-color: #8d0d14; color: #fff; padding: 60px 0;">
+    <div class="container">
+        <div class="row">
+            <!-- Left Column for Text -->
+            <div class="col-sm-4 red-back">
+                <h1>2024 Ecovis Holiday Survey</h1>
+                <p>Embracing a season of collaboration and savings.</p>
+                <p><a class="btn btn-success btn-lg" href="#" role="button">Discover the key takeaways</a></p>
+            </div>
+            <!-- Right Column for Image -->
+            <div class="col-md-6">
+                <img src="your-image-url.png" alt="Holiday Banner" class="img-responsive" style="max-width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Services Section -->
+<div class="container">
+    <div class="section-heading">
+        <h2>Our Services</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Tax Advisory</h3>
+                    <p>We provide top-notch tax planning and advisory services to ensure you meet your compliance needs.</p>
+                    <a href="#" class="btn btn-custom">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Financial Consulting</h3>
+                    <p>Let us guide your financial decisions with our expert consulting services tailored to your business.</p>
+                    <a href="#" class="btn btn-custom">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Audit & Assurance</h3>
+                    <p>Our audit and assurance services help you maintain accuracy and integrity in your financial reports.</p>
+                    <a href="#" class="btn btn-custom">Discover</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Section -->
+<div class="container">
+    <div class="section-heading">
+        <h2>About Us</h2>
+        <p>We are a global team of financial experts offering a comprehensive suite of services.</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <p>&copy; 2024 Ecovis. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+    </div>
+</div>
+
+<!-- Bootstrap JavaScript CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

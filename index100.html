@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Protiviti - Global Business Consulting</title>
+  <!-- Bootstrap 3 CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>
+    .navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    /* padding: 0px; */
+    margin-bottom: 0px;
+}
+    /* Hero section styling */
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-section .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none; /* Make video non-interactable */
+    }
+
+    .hero-section iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-section .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 600px;
+    }
+
+    .hero-section h1 {
+      font-size: 3em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero-section a {
+      margin-top: 20px;
+      padding: 10px 30px;
+      color: white;
+      background-color: #007bff;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+
+    /* Navbar adjustments */
+    .navbar-brand {
+      color: #007bff !important;
+      font-size: 1.8em;
+    }
+
+    .navbar-nav li a {
+      color: #555 !important;
+      font-size: 1.2em;
+    }
+
+    .navbar-nav .glyphicon {
+      font-size: 1.2em;
+    }
+
+    /* Additional page styling */
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">protiviti</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Solutions</a></li>
+      <li><a href="#">Industries</a></li>
+      <li><a href="#">Insights</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Careers</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-globe"></span></a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero-section">
+  <!-- YouTube Video Background -->
+  <div class="video-background">
+    <iframe src="ecovis.mp4" 
+      frameborder="0" allow="autoplay; loop; muted" allowfullscreen></iframe>
+  </div>
+
+ 
+</div>
+
+<!-- Bootstrap 3 JS and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

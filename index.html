@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ECOVIS AlSabti</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-J6qa4849jI4yS3e6Q3a8P58e5S+FZlJ6v1+0/JU2Q5hpuYabWgS4OS0xJDFgE4PH" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel='stylesheet' id='tablepress-default-css' href='https://www.morganfranklin.com/wp-content/tablepress-combined.min.css?ver=20' type='text/css' media='all' />
+    <link rel='stylesheet' id='child-style-css' href='https://morganfpro.wpenginepowered.com/wp-content/themes/Avada-Child-Theme/style.css?ver=1718116858' type='text/css' media='all' />
+    <link rel='stylesheet' id='fusion-dynamic-css-css' href='https://morganfpro.wpenginepowered.com/wp-content/uploads/fusion-styles/9ee9e712b29cd092277a710ab2df99c1.min.css?ver=3.11.0' type='text/css' media='all' />
+
+    <style>
+    @import url(https://db.onlinewebfonts.com/c/575104122c51f24d77e1b361847ee8d9?family=Meta+W01+Book);
+    #main #comment-submit, .button-default, .button.default, .comment-form input[type="submit"], .fusion-button-default, .wpcf7-form input[type="submit"], .wpcf7-submit, input.button-default{
+    background:#cd1432 !important;
+    }
+
+    .menu-text,.fusion-megamenu-title,.awb-justify-title {
+    color: #333333;
+    font-family: Meta W01 Book;
+    font-size: 20px;
+    font-weight:300;
+    line-height:19px;
+    color: #0D2C48;
+    }
+
+    .sub-menu,.fusion-header .fusion-megamenu-title a,.fusion-megamenu-wrapper .fusion-megamenu-submenu .sub-menu a{
+    color: #333333;
+    font-family: Meta W01 Book;
+    font-size: 17px;
+   
+    line-height:17px;
+
+    }
+
+    svg{
+        display:none;
+    }
+    .navbar {
+        background: #000;
+        height: 200px;
+        padding-top: 50px;
+    }
+    ul.nav.navbar-nav a {
+        color: #FFF;
+    }
+    .navbar-nav {
+        margin-top: 25px;    
+    }
+    .dropdown-menu {
+        width: 800px; 
+        padding: 20px; 
+        @font-face {
+    font-family: "Meta W01 Book";
+    src: url("https://db.onlinewebfonts.com/t/575104122c51f24d77e1b361847ee8d9.eot");
+    src: url("https://db.onlinewebfonts.com/t/575104122c51f24d77e1b361847ee8d9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/575104122c51f24d77e1b361847ee8d9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/575104122c51f24d77e1b361847ee8d9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/575104122c51f24d77e1b361847ee8d9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/575104122c51f24d77e1b361847ee8d9.svg#Meta W01 Book")format("svg");
+}
+    }
+    .dropdown-menu h4 {
+        margin-top: 0; 
+    }
+    .dropdown-menu .list-unstyled {
+        padding: 0; 
+    }
+    .dropdown-menu .list-unstyled > li {
+        margin-bottom: 10px; 
+    }
+
+    .fusion-megamenu-holder {
+        margin-left: 175px;
+    }
+
+    .menu-text,.fusion-caret .fusion-dropdown-indicator:before{
+        color: #333333;
+    }
+
+    #footer,.fusion-copyright-notice,.fusion-social-networks,.fusion-social-network-icon,.fusion-social-networks-wrapper a{
+        background: #ececec;
+        color: #333333;
+    }
+
+    .fusion-social-links-footer .fusion-social-networks .fusion-social-network-icon{
+        color: #333333;
+    }
+
+    footer{
+        background: #ececec !important;
+        color: #333333 !important;
+    }
+
+    .menu li a {
+       
+        color: #333333 !important;
+    }
+
+    .fusion-text{
+        color:#ececec;
+    }
+
+    .bg {
+    background-image: url('bg.png');
+   
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply; /* Blends the image and background color */
+    width: 100vw;
+
+    --awb-padding-left:50px !important;
+    --awb-padding-right:50px !important;
+    --awb-padding-top:50px !important;
+    --awb-padding-bottom:50px !important;
+
+    --awb-margin-left:0px !important;
+    --awb-margin-right:0px !important;
+    --awb-margin-top:0px !important;
+    --awb-margin-bottom:0px !important;
+}
+
+.area-box{
+    background:#cd1432;
+    width:900px;
+    padding:25px;
+    opacity:0.8;
+    margin-left:50px;
+
+    
+}
+
+.area-box p{
+    font-family: "Meta Offc W01 Normal", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30.4px;
+    color: #FFF;
+}
+
+.area-box .button-large, .area-box .button-large span{
+    background:#FFF !important;
+    color:#cd1432 !important;
+}
+
+
+
+h1{
+    font-family: "MetaCompPro-Bold W01 Regular", Arial, Helvetica, sans-serif !important;
+    font-size: 50px !important;
+    color: #FFF !important;
+    word-wrap: break-word !important;
+    line-height: 50px !important;
+    margin: 2rem 0 3rem !important;
+}
+
+h2{
+    font-family: "MetaCompPro-Bold W01 Regular", Arial, Helvetica, sans-serif !important;
+    font-size: 40px !important;
+    color: #000 !important;
+    word-wrap: break-word !important;
+    line-height: 40px !important;
+    margin: 2rem 0 3rem !important;
+
+}
+
+h3{
+    font-family: "MetaCompPro-Bold W01 Regular", Arial, Helvetica, sans-serif !important;
+    font-size: 32px !important;
+    color: #000 !important;
+    word-wrap: break-word !important;
+    line-height: 32px !important;
+    margin: 2rem 0 3rem !important;
+
+}
+
+
+
+
+
+.top-barr{
+    height:10px;
+    background-color: #9b143c ;
+}
+
+
+.btn:hover,
+.btn:focus,
+.btn:active{
+    outline: 0 !important;
+}
+/* entire container, keeps perspective */
+.card-container {
+	  -webkit-perspective: 800px;
+   -moz-perspective: 800px;
+     -o-perspective: 800px;
+        perspective: 800px;
+        margin-bottom: 30px;
+}
+/* flip the pane when hovered */
+.card-container:not(.manual-flip):hover .card,
+.card-container.hover.manual-flip .card{
+	-webkit-transform: rotateY( 180deg );
+-moz-transform: rotateY( 180deg );
+ -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+
+.card-container.static:hover .card,
+.card-container.static.hover .card {
+	-webkit-transform: none;
+-moz-transform: none;
+ -o-transform: none;
+    transform: none;
+}
+/* flip speed goes here */
+.card {
+	 -webkit-transition: -webkit-transform .5s;
+   -moz-transition: -moz-transform .5s;
+     -o-transition: -o-transform .5s;
+        transition: transform .5s;
+-webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+     -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	-webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+     -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #FFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+		-webkit-transform: rotateY( 180deg );
+   -moz-transform: rotateY( 180deg );
+     -o-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+        z-index: 3;
+}
+
+.back .btn-simple{
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+}
+/*        Style       */
+
+
+.card{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 4px;
+    color: #444444;
+}
+.card-container, .front, .back {
+	width: 100%;
+	height: 420px;
+	border-radius: 4px;
+}
+.card .cover{
+    height: 105px;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+}
+.card .cover img{
+    width: 100%;
+}
+.card .user{
+    border-radius: 50%;
+    display: block;
+    height: 120px;
+    margin: -55px auto 0;
+    overflow: hidden;
+    width: 120px;
+}
+.card .user img{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 4px solid #FFFFFF;
+    width: 100%;
+}
+
+.card .content{
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    padding: 10px 20px 20px;
+}
+.card .content .main {
+    min-height: 160px;
+}
+.card .back .content .main {
+    height: 215px;
+}
+.card .name {
+    font-size: 22px;
+    line-height: 28px;
+    margin: 10px 0 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+.card h5{
+    margin: 5px 0;
+    font-weight: 400;
+    line-height: 20px;
+}
+.card .profession{
+    color: #999999;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card .footer {
+    border-top: 1px solid #EEEEEE;
+    color: #999999;
+    margin: 30px 0 0;
+    padding: 10px 0 0;
+    text-align: center;
+}
+.card .footer .social-links{
+    font-size: 18px;
+}
+.card .footer .social-links a{
+    margin: 0 7px;
+}
+.card .footer .btn-simple{
+    margin-top: -6px;
+}
+.card .header {
+    padding: 15px 20px;
+    height: 90px;
+}
+.card .motto{
+    border-bottom: 1px solid #EEEEEE;
+    color: #999999;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.card .stats-container{
+	width: 100%;
+	margin-top: 50px;
+}
+.card .stats{
+	display: block;
+	float: left;
+	width: 33.333333%;
+	text-align: center;
+}
+
+.card .stats:first-child{
+	border-right: 1px solid #EEEEEE;
+}
+.card .stats:last-child{
+	border-left: 1px solid #EEEEEE;
+}
+.card .stats h4{
+	font-weight: 300;
+	margin-bottom: 5px;
+}
+.card .stats p{
+	color: #777777;
+}
+/*      Just for presentation        */
+
+.title{
+    color: #506A85;
+    text-align: center;
+    font-weight: 300;
+    font-size: 44px;
+    margin-bottom: 90px;
+    line-height: 90%;
+}
+.title small{
+    font-size: 17px;
+    color: #999;
+    text-transform: uppercase;
+    margin: 0;
+}
+.space-30{
+	height: 30px;
+	display: block;
+}
+.space-50{
+    height: 50px;
+    display: block;
+}
+.space-200{
+    height: 200px;
+    display: block;
+}
+.white-board{
+    background-color: #FFFFFF;
+    min-height: 200px;
+    padding: 60px 60px 20px;
+}
+.ct-heart{
+    color: #F74933;
+}
+
+ pre.prettyprint{
+    background-color: #ffffff;
+    border: 1px solid #999;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: left;
+}
+.atv, .str{
+    color: #05AE0E;
+}
+.tag, .pln, .kwd{
+     color: #3472F7;
+}
+.atn{
+  color: #2C93FF;
+}
+.pln{
+   color: #333;
+}
+.com{
+    color: #999;
+}
+
+.btn-simple{
+    opacity: .8;
+    color: #666666;
+    background-color: transparent;
+}
+
+.btn-simple:hover,
+.btn-simple:focus{
+    background-color: transparent;
+    box-shadow: none;
+    opacity: 1;
+}
+.btn-simple i{
+    font-size: 16px;
+}
+
+.navbar-brand-logo{
+    padding: 0;
+}
+.navbar-brand-logo .logo{
+    border: 1px solid #333333;
+    border-radius: 50%;
+    float: left;
+    overflow: hidden;
+    width: 60px;
+}
+.navbar .navbar-brand-logo .brand{
+    color: #FFFFFF;
+    float: left;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 60px;
+}
+.navbar-default .navbar-brand-logo .brand{
+    color: #555;
+}
+
+
+
+/*       Fix bug for IE      */
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .front, .back{
+        -ms-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+
+    .back {
+        visibility: hidden;
+        -ms-transition: all 0.2s cubic-bezier(.92,.01,.83,.67);
+    }
+    .front{
+        z-index: 4;
+    }
+    .card-container:not(.manual-flip):hover .back,
+    .card-container.manual-flip.hover .back{
+        z-index: 5;
+        visibility: visible;
+    }
+}
+
+
+.card-container .front,.card-container .front h3, .card-container .front p{
+
+    background: #333333;
+    color:#FFF !important;
+
+}
+
+
+.card-container .front .cover {
+    display:none;
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+    <div class="top-barr"></div>
+    <header class="fusion-header-wrapper" style="background:#ececec">
+    <div class="fusion-header-v1 fusion-logo-alignment fusion-logo-left fusion-sticky-menu-1 fusion-sticky-logo-1 fusion-mobile-logo-1  fusion-mobile-menu-design-modern">
+    <div class="fusion-header-sticky-height" style="height: 144px; overflow: visible;"></div>
+    <div class="fusion-header" style="height: 144px; overflow: visible; top: 0px;">
+    <div class="fusion-row" style="padding-top: 10px; padding-bottom: 10px;">
+    <div class="fusion-logo" data-margin-top="31px" data-margin-bottom="31px" data-margin-left="0px" data-margin-right="0px" style="margin-top: 31px; margin-bottom: 31px;">
+    <a class="fusion-logo-link" href="#">
+    <img src="https://ecovisalsabti.com/wp-content/uploads/2022/03/Logo-4.png"
+     srcset="https://ecovisalsabti.com/wp-content/uploads/2022/03/Logo-4.png 1x,
+     https://ecovisalsabti.com/wp-content/uploads/2022/03/Logo-4.png  2x"
+      width="1501" height="316" style="max-height:316px;height:auto;"
+       alt="MorganFranklin Consulting Logo"
+        data-retina_logo_url="https://ecovisalsabti.com/wp-content/uploads/2022/03/Logo-4.png"
+         class="fusion-standard-logo">
+
+        <!-- mobile logo -->
+        <img src="https://morganfpro.wpenginepowered.com/wp-content/uploads/2022/05/MFC_logo_lockup_darkBG_RGB_1.png" 
+        srcset="https://ecovisalsabti.com/wp-content/uploads/2022/03/Logo-4.png 1x, 
+        https://ecovisalsabti.com/wp-content/uploads/2022/03/Logo-4.png 2x"
+         width="1501" height="316" 
+         style="max-height:316px;height:auto;" alt="MorganFranklin Consulting Logo" 
+         data-retina_logo_url="https://ecovisalsabti.com/wp-content/uploads/2022/03/Logo-4.png" class="fusion-mobile-logo">
+    
+        <!-- sticky header logo -->
+        <img src="https://morganfpro.wpenginepowered.com/wp-content/uploads/2022/05/MFC_logo_lockup_darkBG_RGB_1.png" 
+        srcset="https://ecovisalsabti.com/wp-content/uploads/2022/03/Logo-4.png 1x, 
+        https://ecovisalsabti.com/wp-content/uploads/2022/03/Logo-4.png 2x" 
+        width="1501" height="316" style="max-height: 316px;" alt="MorganFranklin Consulting Logo" 
+        data-retina_logo_url="https://ecovisalsabti.com/wp-content/uploads/2022/03/Logo-4.png" 
+        class="fusion-sticky-logo" data-logo-height="62" data-logo-width="294.5">
+
+
+    </a>
+    </div>		
+    <nav class="fusion-main-menu" aria-label="Main Menu" style=""><div class="fusion-overlay-search" style="max-width: 614.083px;">		<form role="search" class="searchform fusion-search-form  fusion-search-form-classic" method="get" action="https://www.morganfranklin.com/">
+ 
+
+
+    
+</form>
+<div class="fusion-search-spacer"></div><a href="#" role="button" aria-label="Close Search" class="fusion-close-search"></a></div><ul id="menu-main-menu" class="fusion-menu">
+         
+        <li id="menu-item-1119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1119 fusion-dropdown-menu" data-item-id="1119" style="">
+            
+            <a href="https://www.morganfranklin.com/about/" class="fusion-arrow-highlight" style="height: 84px;" aria-haspopup="true"><span class="menu-text">About<span class="fusion-arrow-svg"><svg height="12px" width="23px">
+            <path d="M0 0 L11.5 12 L23 0 Z" fill="rgba(13,14,47,0)"></path>
+            </svg></span><span class="fusion-dropdown-svg"><svg height="12px" width="23px">
+                <path d="M0 12 L11.5 0 L23 12 Z" fill="#ebe9e9"></path>
+                </svg></span></span> <span class="fusion-caret"><i class="fusion-dropdown-indicator" aria-hidden="true"></i></span></a><ul class="sub-menu">
+                    
+                    
+                    <li id="menu-item-1463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1463 fusion-dropdown-submenu"><a href="https://www.morganfranklin.com/about/leadership/" class="fusion-arrow-highlight"><span>Profile</span></a></li>
+                    <li id="menu-item-1120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1120 fusion-dropdown-submenu"><a href="https://www.morganfranklin.com/about/beyond-consulting/" class="fusion-arrow-highlight"><span>Leadership</span></a></li>
+                    
+                    
+                   
+                </ul>
+            
+            </li>
+
+
+            <li id="menu-item-1119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1119 fusion-dropdown-menu" data-item-id="1119" style="">
+            
+                <a href="https://www.morganfranklin.com/about/" class="fusion-arrow-highlight" style="height: 84px;" aria-haspopup="true"><span class="menu-text">Services<span class="fusion-arrow-svg"><svg height="12px" width="23px">
+                <path d="M0 0 L11.5 12 L23 0 Z" fill="rgba(13,14,47,0)"></path>
+                </svg></span><span class="fusion-dropdown-svg"><svg height="12px" width="23px">
+                    <path d="M0 12 L11.5 0 L23 12 Z" fill="#ebe9e9"></path>
+                    </svg></span></span> <span class="fusion-caret"><i class="fusion-dropdown-indicator" aria-hidden="true"></i></span></a><ul class="sub-menu">
+                        
+                        
+                        <li id="menu-item-1463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1463 fusion-dropdown-submenu"><a href="https://www.morganfranklin.com/about/leadership/" class="fusion-arrow-highlight"><span>Internal Audit</span></a></li>
+                        <li id="menu-item-1120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1120 fusion-dropdown-submenu"><a href="https://www.morganfranklin.com/about/beyond-consulting/" class="fusion-arrow-highlight"><span>Enterprise Risk Management</span></a></li>
+                        <li id="menu-item-1120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1120 fusion-dropdown-submenu"><a href="https://www.morganfranklin.com/about/beyond-consulting/" class="fusion-arrow-highlight"><span>Cybersecurity</span></a></li>
+                        <li id="menu-item-1120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1120 fusion-dropdown-submenu"><a href="https://www.morganfranklin.com/about/beyond-consulting/" class="fusion-arrow-highlight"><span>Audit & Assurance</span></a></li>
+                        <li id="menu-item-1120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1120 fusion-dropdown-submenu"><a href="https://www.morganfranklin.com/about/beyond-consulting/" class="fusion-arrow-highlight"><span>Zakat & Tax</span></a></li>
+                        <li id="menu-item-1120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1120 fusion-dropdown-submenu"><a href="https://www.morganfranklin.com/about/beyond-consulting/" class="fusion-arrow-highlight"><span>Business Continuity Management</span></a></li>
+                        <li id="menu-item-1120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1120 fusion-dropdown-submenu"><a href="https://www.morganfranklin.com/about/beyond-consulting/" class="fusion-arrow-highlight"><span>Fixed Asset Management</span></a></li>
+                        <li id="menu-item-1120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1120 fusion-dropdown-submenu"><a href="https://www.morganfranklin.com/about/beyond-consulting/" class="fusion-arrow-highlight"><span>Data Management & Privacy</span></a></li>
+                        
+                        
+                       
+                    </ul>
+                
+                </li>
+
+
+                    
+                    
+                    <li id="menu-item-1126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1126" data-item-id="1126"><a href="https://www.morganfranklin.com/insights/" class="fusion-arrow-highlight" style="height: 84px;"><span class="menu-text">Careers<span class="fusion-arrow-svg"><svg height="12px" width="23px">
+            <path d="M0 0 L11.5 12 L23 0 Z" fill="rgba(13,14,47,0)"></path>
+            </svg></span></span></a></li>
+            
+            <li id="menu-item-1057" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1057" data-item-id="1057"><a href="https://www.morganfranklin.com/news/" class="fusion-arrow-highlight" style="height: 84px;"><span class="menu-text">Contact Us<span class="fusion-arrow-svg"><svg height="12px" width="23px">
+            <path d="M0 0 L11.5 12 L23 0 Z" fill="rgba(13,14,47,0)"></path>
+            </svg></span></span></a></li>
+            
+            <li id="menu-item-1217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1217 fusion-dropdown-menu" data-item-id="1217" style=""><a href="https://www.morganfranklin.com/careers/" class="fusion-arrow-highlight" style="height: 84px;" aria-haspopup="true"><span class="menu-text">Get A Quote<span class="fusion-arrow-svg"><svg height="12px" width="23px">
+            <path d="M0 0 L11.5 12 L23 0 Z" fill="rgba(13,14,47,0)"></path>
+            </svg></span><span class="fusion-dropdown-svg"><svg height="12px" width="23px">
+                <path d="M0 12 L11.5 0 L23 12 Z" fill="#ebe9e9"></path>
+                </svg></span></span> <span class="fusion-caret"><i class="fusion-dropdown-indicator" aria-hidden="true"></i></span></a>
+
+            </li>
+            
+            
+
+
+
+<div class="fusion-clearfix"></div>
+
+    </div>
+</div>
+        </div>
+        <div class="fusion-clearfix"></div>
+    </header>
+
+
+
+
+
+    <main id="main" class="clearfix width-100">
+        <div class="fusion-row" style="max-width:100%;">
+<section id="content" class="full-width">
+            <div id="post-12404" class="post-12404 page type-page status-publish hentry">
+    <span class="entry-title rich-snippet-hidden">Home</span><span class="vcard rich-snippet-hidden">
+        <span class="fn">
+            <a href="https://www.morganfranklin.com/author/larry-park/" title="Posts by Larry Park" rel="author">Larry Park</a></span></span><span class="updated rich-snippet-hidden">2024-08-13T21:49:10-04:00</span>						<div class="post-content">
+        <div class="bg fusion-fullwidth fullwidth-box fusion-builder-row-1 fusion-parallax-none nonhundred-percent-fullwidth non-hundred-percent-height-scrolling" style="--awb-border-radius-top-left:0px;--awb-border-radius-top-right:0px;--awb-border-radius-bottom-right:0px;--awb-border-radius-bottom-left:0px;--awb-padding-top:15%;--awb-padding-right:5%;--awb-padding-bottom:15%;--awb-padding-left:0px;--awb-margin-top:0px;--awb-margin-bottom:0px;--awb-nd-color:#001842;--awb-background-image:url(&quot;bg.png&quot;);--awb-background-size:cover;--awb-flex-wrap:wrap;">
+            
+            
+            <div class="fusion-builder-row fusion-row area-box">
+                
+                <div class="width_set fusion-layout-column fusion_builder_column fusion-builder-column-0 fusion_builder_column_2_3 2_3 fusion-two-third fusion-column-first white" style="--awb-bg-size:cover;width:66.6666666667%;width:calc(66.6666666667% - ( ( 4% ) * 0.666666666667 ) );margin-right: 4%;"><div class="fusion-column-wrapper fusion-column-has-shadow fusion-flex-column-wrapper-legacy"><div class="fusion-text fusion-text-1"><h1 class="white fusion-responsive-typography-calculated" data-fontsize="56" style="--fontSize: 56; line-height: 1;" data-lineheight="56px">
+            
+           Risk Advisory, Audit and Consulting Firm
+        
+        </h1>
+</div><div class="fusion-text fusion-text-2" style="--awb-font-size:22px;--awb-margin-right:25%;">
+    
+    
+    <p>ECOVIS helps organizations achieve their strategic business 
+        
+        objectives by its comprehensive risk-based approach through Risk FORECAST Model
+        to a very structured way of carrying out the audit planning, execution and reporting.</p>
+
+
+</div><div class="fusion-button-wrapper">
+    <a class="fusion-button button-flat button-large button-default fusion-button-default button-1 fusion-button-default-span fusion-button-default-type" style="--button_margin-right:16px;--button_margin-bottom:16px;" target="_self" href="/services"><span class="fusion-button-text">Our Services</span>
+        
+        
+    
+    
+    </a></div>
+    
+   
+
+
+
+
+
+
+
+    
+    
+    
+
+
+
+        
+        <div class="fusion-clearfix"></div></div></div></div></div>
+        
+        
+        
+        
+        
+        
+        <div class="container">
+            <div class="row">
+                <h2 class="title">
+                   Our Capabilities
+                </h2>
+                <div class="col-sm-10 col-sm-offset-1">
+                 <div class="col-md-4 col-sm-6">
+                     <div class="card-container">
+                        <div class="card">
+                            <div class="front">
+                                <div class="cover">
+                                    <img src="http://lorempixel.com/300/300/people/"/>
+                                </div>
+                                <div class="user">
+                                    <img class="img-circle" src="http://lorempixel.com/300/300/people/"/>
+                                </div>
+                                <div class="content">
+                                    <div class="main">
+                                        <h3 class="name">Internal Audit
+                                        </h3>
+                                        <p class="profession">CEO</p>
+                                        <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                                    </div>
+                                    <div class="footer">
+                                        <i class="fa fa-mail-forward"></i> Auto Rotation
+                                    </div>
+                                </div>
+                            </div> <!-- end front panel -->
+                            <div class="back">
+                                <div class="header">
+                                    <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                                </div>
+                                <div class="content">
+                                    <div class="main">
+                                        <h4 class="text-center">Job Description</h4>
+                                        <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+        
+                                        <div class="stats-container">
+                                            <div class="stats">
+                                                <h4>235</h4>
+                                                <p>
+                                                    Followers
+                                                </p>
+                                            </div>
+                                            <div class="stats">
+                                                <h4>114</h4>
+                                                <p>
+                                                    Following
+                                                </p>
+                                            </div>
+                                            <div class="stats">
+                                                <h4>35</h4>
+                                                <p>
+                                                    Projects
+                                                </p>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <div class="social-links text-center">
+                                        <a href="#" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                        <a href="#" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                        <a href="#" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                                    </div>
+                                </div>
+                            </div> <!-- end back panel -->
+                        </div> <!-- end card -->
+                    </div> <!-- end card-container -->
+                </div> <!-- end col sm 3 -->
+        <!--         <div class="col-sm-1"></div> -->
+                <div class="col-md-4 col-sm-6">
+                     <div class="card-container ">
+                        <div class="card">
+                            <div class="front">
+                                <div class="cover">
+                                    <img src="http://lorempixel.com/300/300/business/"/>
+                                </div>
+                                <div class="user">
+                                    <img class="img-circle" src="http://lorempixel.com/300/300/business/"/>
+                                </div>
+                                <div class="content">
+                                    <div class="main">
+                                        <h3 class="name">Enterprise Risk Management
+                                        </h3>
+                                        <p class="profession">Web Developer</p>
+                                        <p class="text-center">"Lamborghini Mercy <br>Your chick she so thirsty <br>I'm in that two seat Lambo"</p>
+                                    </div>
+                                    <div class="footer">
+                                        <button class="btn btn-simple" onclick="rotateCard(this)">
+                                            <i class="fa fa-mail-forward"></i> Manual Rotation
+                                        </button>
+                                    </div>
+                                </div>
+                            </div> <!-- end front panel -->
+                            <div class="back">
+                                <div class="header">
+                                    <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                                </div>
+                                <div class="content">
+                                    <div class="main">
+                                        <h4 class="text-center">Job Description</h4>
+                                        <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+        
+                                        <div class="stats-container">
+                                            <div class="stats">
+                                                <h4>235</h4>
+                                                <p>
+                                                    Followers
+                                                </p>
+                                            </div>
+                                            <div class="stats">
+                                                <h4>114</h4>
+                                                <p>
+                                                    Following
+                                                </p>
+                                            </div>
+                                            <div class="stats">
+                                                <h4>35</h4>
+                                                <p>
+                                                    Projects
+                                                </p>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                        <i class="fa fa-reply"></i> Back
+                                    </button>
+                                    <div class="social-links text-center">
+                                        <a href="#" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                        <a href="#" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                        <a href="#" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                                    </div>
+                                </div>
+                            </div> <!-- end back panel -->
+                        </div> <!-- end card -->
+                    </div> <!-- end card-container -->
+                </div> <!-- end col sm 3 -->
+        <!--         <div class="col-sm-1"></div> -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="front">
+                                <div class="cover">
+                                    <img src="http://lorempixel.com/300/300/sports/"/>
+                                </div>
+                                <div class="user">
+                                    <img class="img-circle" src="http://lorempixel.com/300/300/sports/"/>
+                                </div>
+                                <div class="content">
+                                    <div class="main">
+                                        <h3 class="name">Cybersecurity
+                                        </h3>
+                                        <p class="profession">Product Manager</p>
+        
+                                        <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="rating">
+                                            <i class="fa fa-mail-forward"></i> Auto Rotation
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- end front panel -->
+                            <div class="back">
+                                <div class="header">
+                                    <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                                </div>
+                                <div class="content">
+                                    <div class="main">
+                                        <h4 class="text-center">Job Description</h4>
+                                        <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+        
+                                        <div class="stats-container">
+                                            <div class="stats">
+                                                <h4>235</h4>
+                                                <p>
+                                                    Followers
+                                                </p>
+                                            </div>
+                                            <div class="stats">
+                                                <h4>114</h4>
+                                                <p>
+                                                    Following
+                                                </p>
+                                            </div>
+                                            <div class="stats">
+                                                <h4>35</h4>
+                                                <p>
+                                                    Projects
+                                                </p>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <div class="social-links text-center">
+                                        <a href="#" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                        <a href="#" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                        <a href="#" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                                    </div>
+                                </div>
+                            </div> <!-- end back panel -->
+                        </div> <!-- end card -->
+                    </div> <!-- end card-container -->
+                </div> <!-- end col-sm-3 -->
+                </div> <!-- end col-sm-10 -->
+
+
+
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card-container">
+                           <div class="card">
+                               <div class="front">
+                                   <div class="cover">
+                                       <img src="http://lorempixel.com/300/300/people/"/>
+                                   </div>
+                                   <div class="user">
+                                       <img class="img-circle" src="http://lorempixel.com/300/300/people/"/>
+                                   </div>
+                                   <div class="content">
+                                       <div class="main">
+                                           <h3 class="name">Internal Audit
+                                           </h3>
+                                           <p class="profession">CEO</p>
+                                           <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                                       </div>
+                                       <div class="footer">
+                                           <i class="fa fa-mail-forward"></i> Auto Rotation
+                                       </div>
+                                   </div>
+                               </div> <!-- end front panel -->
+                               <div class="back">
+                                   <div class="header">
+                                       <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                                   </div>
+                                   <div class="content">
+                                       <div class="main">
+                                           <h4 class="text-center">Job Description</h4>
+                                           <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+           
+                                           <div class="stats-container">
+                                               <div class="stats">
+                                                   <h4>235</h4>
+                                                   <p>
+                                                       Followers
+                                                   </p>
+                                               </div>
+                                               <div class="stats">
+                                                   <h4>114</h4>
+                                                   <p>
+                                                       Following
+                                                   </p>
+                                               </div>
+                                               <div class="stats">
+                                                   <h4>35</h4>
+                                                   <p>
+                                                       Projects
+                                                   </p>
+                                               </div>
+                                           </div>
+           
+                                       </div>
+                                   </div>
+                                   <div class="footer">
+                                       <div class="social-links text-center">
+                                           <a href="#" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                           <a href="#" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                           <a href="#" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                                       </div>
+                                   </div>
+                               </div> <!-- end back panel -->
+                           </div> <!-- end card -->
+                       </div> <!-- end card-container -->
+                   </div> <!-- end col sm 3 -->
+           <!--         <div class="col-sm-1"></div> -->
+                   <div class="col-md-4 col-sm-6">
+                        <div class="card-container ">
+                           <div class="card">
+                               <div class="front">
+                                   <div class="cover">
+                                       <img src="http://lorempixel.com/300/300/business/"/>
+                                   </div>
+                                   <div class="user">
+                                       <img class="img-circle" src="http://lorempixel.com/300/300/business/"/>
+                                   </div>
+                                   <div class="content">
+                                       <div class="main">
+                                           <h3 class="name">Enterprise Risk Management
+                                           </h3>
+                                           <p class="profession">Web Developer</p>
+                                           <p class="text-center">"Lamborghini Mercy <br>Your chick she so thirsty <br>I'm in that two seat Lambo"</p>
+                                       </div>
+                                       <div class="footer">
+                                           <button class="btn btn-simple" onclick="rotateCard(this)">
+                                               <i class="fa fa-mail-forward"></i> Manual Rotation
+                                           </button>
+                                       </div>
+                                   </div>
+                               </div> <!-- end front panel -->
+                               <div class="back">
+                                   <div class="header">
+                                       <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                                   </div>
+                                   <div class="content">
+                                       <div class="main">
+                                           <h4 class="text-center">Job Description</h4>
+                                           <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+           
+                                           <div class="stats-container">
+                                               <div class="stats">
+                                                   <h4>235</h4>
+                                                   <p>
+                                                       Followers
+                                                   </p>
+                                               </div>
+                                               <div class="stats">
+                                                   <h4>114</h4>
+                                                   <p>
+                                                       Following
+                                                   </p>
+                                               </div>
+                                               <div class="stats">
+                                                   <h4>35</h4>
+                                                   <p>
+                                                       Projects
+                                                   </p>
+                                               </div>
+                                           </div>
+           
+                                       </div>
+                                   </div>
+                                   <div class="footer">
+                                       <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                           <i class="fa fa-reply"></i> Back
+                                       </button>
+                                       <div class="social-links text-center">
+                                           <a href="#" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                           <a href="#" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                           <a href="#" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                                       </div>
+                                   </div>
+                               </div> <!-- end back panel -->
+                           </div> <!-- end card -->
+                       </div> <!-- end card-container -->
+                   </div> <!-- end col sm 3 -->
+           <!--         <div class="col-sm-1"></div> -->
+                   <div class="col-md-4 col-sm-6">
+                       <div class="card-container">
+                           <div class="card">
+                               <div class="front">
+                                   <div class="cover">
+                                       <img src="http://lorempixel.com/300/300/sports/"/>
+                                   </div>
+                                   <div class="user">
+                                       <img class="img-circle" src="http://lorempixel.com/300/300/sports/"/>
+                                   </div>
+                                   <div class="content">
+                                       <div class="main">
+                                           <h3 class="name">Cybersecurity
+                                           </h3>
+                                           <p class="profession">Product Manager</p>
+           
+                                           <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                                       </div>
+                                       <div class="footer">
+                                           <div class="rating">
+                                               <i class="fa fa-mail-forward"></i> Auto Rotation
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div> <!-- end front panel -->
+                               <div class="back">
+                                   <div class="header">
+                                       <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                                   </div>
+                                   <div class="content">
+                                       <div class="main">
+                                           <h4 class="text-center">Job Description</h4>
+                                           <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+           
+                                           <div class="stats-container">
+                                               <div class="stats">
+                                                   <h4>235</h4>
+                                                   <p>
+                                                       Followers
+                                                   </p>
+                                               </div>
+                                               <div class="stats">
+                                                   <h4>114</h4>
+                                                   <p>
+                                                       Following
+                                                   </p>
+                                               </div>
+                                               <div class="stats">
+                                                   <h4>35</h4>
+                                                   <p>
+                                                       Projects
+                                                   </p>
+                                               </div>
+                                           </div>
+           
+                                       </div>
+                                   </div>
+                                   <div class="footer">
+                                       <div class="social-links text-center">
+                                           <a href="#" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                           <a href="#" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                           <a href="#" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                                       </div>
+                                   </div>
+                               </div> <!-- end back panel -->
+                           </div> <!-- end card -->
+                       </div> <!-- end card-container -->
+                   </div> <!-- end col-sm-3 -->
+                   </div> <!-- end col-sm-10 -->
+            </div> <!-- end row -->
+            
+        </div>
+            
+           
+        </div>
+                
+
+        
+                            <div class="row">
+                                <div class="col-sm-10" style="
+                                color: #FFFFFF;
+                                font-family: 'MetaCompPro-Bold W01 Regular', Arial, Helvetica, sans-serif;
+                                font-size: 36px;
+                                font-weight: 500;
+                                line-height: 36px;
+                                text-transform: capitalize;
+                               ">
+                                    Global expertise with local faces
+                                </div>    
+                                <div class="col-sm-2">
+                                    <img style="width:150px;" src="https://ecovisalsabti.com/wp-content/uploads/2022/03/logo-white-3.png">
+                                </div>
+                            </div>
+
+</div>
+                                        </div>
+</section>
+                
+            </div>  <!-- fusion-row -->
+        </main>
+
+        <div class="fusion-footer">
+					
+            <footer class="fusion-footer-widget-area fusion-widget-area">
+                <div class="fusion-row">
+                    <div class="fusion-columns fusion-columns-1 fusion-widget-area">
+                        
+                                                                                                            <div class="fusion-column fusion-column-last col-lg-12 col-md-12 col-sm-12">
+                                    <section id="menu-widget-2" class="fusion-footer-widget-column widget menu"><style type="text/css">#menu-widget-2{text-align:center;}#fusion-menu-widget-2 li{display:inline-block;}#fusion-menu-widget-2 ul li a{display:inline-block;padding:0;border:0;color:#ebe9e9;font-size:14px;}#fusion-menu-widget-2 ul li a:after{content:"|";color:#ebe9e9;padding-right:25px;padding-left:25px;font-size:14px;}#fusion-menu-widget-2 ul li a:hover,#fusion-menu-widget-2 ul .menu-item.current-menu-item a{color:#fff;}#fusion-menu-widget-2 ul li:last-child a:after{display:none;}#fusion-menu-widget-2 ul li .fusion-widget-cart-number{margin:0 7px;background-color:#fff;color:#ebe9e9;}#fusion-menu-widget-2 ul li.fusion-active-cart-icon .fusion-widget-cart-icon:after{color:#fff;}</style><nav id="fusion-menu-widget-2" class="fusion-widget-menu" aria-label="Secondary navigation"><ul id="menu-footer-nav" class="menu">
+                                        
+                                        <li id="menu-item-6472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6472"><a href="/contact/#locations">Locations</a></li>
+                                        
+                                        <li id="menu-item-1197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1197"><a href="https://www.morganfranklin.com/contact/">Contact</a></li>
+                                        
+                                        <li id="menu-item-1216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1216"><a href="https://www.morganfranklin.com/careers/">Careers</a></li>
+                                        
+                                        <li id="menu-item-13629" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13629"><a href="https://www.vaco.com/privacy/?__hstc=249586905.43c523af9058a0ff93d617043ff34da7.1729603018317.1729603018317.1729680441275.2&amp;__hssc=249586905.15.1729680441275&amp;__hsfp=1502133368">Privacy Policy</a></li>
+                                        
+                                        <li id="menu-item-131" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="https://www.morganfranklin.com/sitemap/">Sitemap</a></li></ul></nav><div style="clear:both;"></div></section><section id="text-5" class="fusion-footer-widget-column widget widget_text">			<div class="textwidget"></div>
+                <div style="clear:both;"></div></section>																					</div>
+                                                                                                                                                                                                                                
+                        <div class="fusion-clearfix"></div>
+                    </div> <!-- fusion-columns -->
+                </div> <!-- fusion-row -->
+            </footer> <!-- fusion-footer-widget-area -->
+        
+            
+            <footer id="footer" class="fusion-footer-copyright-area">
+                <div class="fusion-row">
+                    <div class="fusion-copyright-content">
+        
+                        <div class="fusion-copyright-notice">
+                <div>
+                © Copyright <script>document.write(new Date().getFullYear());</script>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;All Rights Reserved&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span class="optanon-show-settings">Privacy Preferences</span>	</div>
+        </div>
+        <div class="fusion-social-links-footer">
+            <div class="fusion-social-networks"><div class="fusion-social-networks-wrapper"><a class="fusion-social-network-icon fusion-tooltip fusion-twitter awb-icon-twitter" style="" data-placement="top" data-title="Twitter" data-toggle="tooltip" title="" href="https://twitter.com/MorganFranklin" target="_blank" rel="noopener noreferrer" data-original-title="Twitter"><span class="screen-reader-text">Twitter</span></a><a class="fusion-social-network-icon fusion-tooltip fusion-linkedin awb-icon-linkedin" style="" data-placement="top" data-title="LinkedIn" data-toggle="tooltip" title="" href="https://www.linkedin.com/company/morganfranklin-consulting" target="_blank" rel="noopener noreferrer" data-original-title="LinkedIn"><span class="screen-reader-text">LinkedIn</span></a><a class="fusion-social-network-icon fusion-tooltip fusion-youtube awb-icon-youtube" style="" data-placement="top" data-title="YouTube" data-toggle="tooltip" title="" href="https://www.youtube.com/channel/UCsdQVJUEJzj0YdJxl54ww8g" target="_blank" rel="noopener noreferrer" data-original-title="YouTube"><span class="screen-reader-text">YouTube</span></a></div></div></div>
+        
+                    </div> <!-- fusion-fusion-copyright-content -->
+                </div> <!-- fusion-row -->
+            </footer> <!-- #footer -->
+                </div>
+                <script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+                <script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+
+         
+                
+
+                <script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/includes/lib/assets/min/js/general/fusion-lightbox.js?ver=1" id="fusion-lightbox-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/includes/lib/assets/min/js/general/fusion-tooltip.js?ver=1" id="fusion-tooltip-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/includes/lib/assets/min/js/general/fusion-sharing-box.js?ver=1" id="fusion-sharing-box-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/includes/lib/assets/min/js/library/jquery.sticky-kit.js?ver=1.1.2" id="jquery-sticky-kit-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/includes/lib/assets/min/js/library/fusion-youtube.js?ver=2.2.1" id="fusion-youtube-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/includes/lib/assets/min/js/library/vimeoPlayer.js?ver=2.2.1" id="vimeo-player-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/assets/min/js/general/avada-general-footer.js?ver=7.11.0" id="avada-general-footer-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/assets/min/js/general/avada-quantity.js?ver=7.11.0" id="avada-quantity-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/assets/min/js/general/avada-crossfade-images.js?ver=7.11.0" id="avada-crossfade-images-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/assets/min/js/general/avada-select.js?ver=7.11.0" id="avada-select-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/assets/min/js/general/avada-contact-form-7.js?ver=7.11.0" id="avada-contact-form-7-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/assets/min/js/library/jquery.elasticslider.js?ver=7.11.0" id="jquery-elastic-slider-js"></script>
+<script type="text/javascript" id="avada-live-search-js-extra">
+/* <![CDATA[ */
+var avadaLiveSearchVars = {"live_search":"1","ajaxurl":"https:\/\/www.morganfranklin.com\/wp-admin\/admin-ajax.php","no_search_results":"No search results match your query. Please try again","min_char_count":"4","per_page":"100","show_feat_img":"1","display_post_type":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/assets/min/js/general/avada-live-search.js?ver=7.11.0" id="avada-live-search-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/includes/lib/assets/min/js/general/fusion-alert.js?ver=6.6.2" id="fusion-alert-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/plugins/fusion-builder/assets/js/min/general/awb-off-canvas.js?ver=3.11.0" id="awb-off-canvas-js"></script>
+<script type="text/javascript" id="fusion-flexslider-js-extra">
+/* <![CDATA[ */
+var fusionFlexSliderVars = {"status_vimeo":"1","slideshow_autoplay":"","slideshow_speed":"7000","pagination_video_slide":"","status_yt":"1","flex_smoothHeight":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/includes/lib/assets/min/js/general/fusion-flexslider.js?ver=6.6.2" id="fusion-flexslider-js"></script>
+<script type="text/javascript" id="fusion-animations-js-extra">
+/* <![CDATA[ */
+var fusionAnimationsVars = {"status_css_animations":"desktop"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/plugins/fusion-builder/assets/js/min/general/fusion-animations.js?ver=6.6.2" id="fusion-animations-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/plugins/fusion-builder/assets/js/min/general/fusion-column-legacy.js?ver=6.6.2" id="fusion-column-legacy-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/includes/lib/assets/min/js/general/fusion-button.js?ver=6.6.2" id="fusion-button-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/plugins/fusion-builder/assets/js/min/library/jquery.textillate.js?ver=3.11.0" id="jquery-title-textillate-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/plugins/fusion-builder/assets/js/min/general/fusion-title.js?ver=6.6.2" id="fusion-title-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/plugins/fusion-builder/assets/js/min/general/fusion-motion-effects.js?ver=6.6.2" id="fusion-motion-effects-js"></script>
+<script type="text/javascript" id="awb-carousel-js-extra">
+/* <![CDATA[ */
+var awbCarouselVars = {"related_posts_speed":"2500","carousel_speed":"2500"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/includes/lib/assets/min/js/general/awb-carousel.js?ver=6.6.2" id="awb-carousel-js"></script>
+<script type="text/javascript" id="fusion-container-js-extra">
+/* <![CDATA[ */
+var fusionContainerVars = {"content_break_point":"800","container_hundred_percent_height_mobile":"0","is_sticky_header_transparent":"0","hundred_percent_scroll_sensitivity":"450"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/plugins/fusion-builder/assets/js/min/general/fusion-container.js?ver=3.11.0" id="fusion-container-js"></script>
+<script type="text/javascript" id="avada-elastic-slider-js-extra">
+/* <![CDATA[ */
+var avadaElasticSliderVars = {"tfes_autoplay":"1","tfes_animation":"sides","tfes_interval":"3000","tfes_speed":"800","tfes_width":"150"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/assets/min/js/general/avada-elastic-slider.js?ver=7.11.0" id="avada-elastic-slider-js"></script>
+<script type="text/javascript" id="avada-drop-down-js-extra">
+/* <![CDATA[ */
+var avadaSelectVars = {"avada_drop_down":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/assets/min/js/general/avada-drop-down.js?ver=7.11.0" id="avada-drop-down-js"></script>
+<script type="text/javascript" id="avada-to-top-js-extra">
+/* <![CDATA[ */
+var avadaToTopVars = {"status_totop":"desktop_and_mobile","totop_position":"right","totop_scroll_down_only":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/assets/min/js/general/avada-to-top.js?ver=7.11.0" id="avada-to-top-js"></script>
+<script type="text/javascript" id="avada-header-js-extra">
+/* <![CDATA[ */
+var avadaHeaderVars = {"header_position":"top","header_sticky":"1","header_sticky_type2_layout":"menu_only","header_sticky_shadow":"1","side_header_break_point":"1050","header_sticky_mobile":"1","header_sticky_tablet":"1","mobile_menu_design":"modern","sticky_header_shrinkage":"1","nav_height":"84","nav_highlight_border":"0","nav_highlight_style":"arrow","logo_margin_top":"31px","logo_margin_bottom":"31px","layout_mode":"wide","header_padding_top":"10px","header_padding_bottom":"10px","scroll_offset":"full"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/assets/min/js/general/avada-header.js?ver=7.11.0" id="avada-header-js"></script>
+<script type="text/javascript" id="avada-menu-js-extra">
+/* <![CDATA[ */
+var avadaMenuVars = {"site_layout":"wide","header_position":"top","logo_alignment":"left","header_sticky":"1","header_sticky_mobile":"1","header_sticky_tablet":"1","side_header_break_point":"1050","megamenu_base_width":"custom_width","mobile_menu_design":"modern","dropdown_goto":"Go to...","mobile_nav_cart":"Shopping Cart","mobile_submenu_open":"Open submenu of %s","mobile_submenu_close":"Close submenu of %s","submenu_slideout":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/assets/min/js/general/avada-menu.js?ver=7.11.0" id="avada-menu-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/assets/min/js/library/bootstrap.scrollspy.js?ver=7.11.0" id="bootstrap-scrollspy-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/assets/min/js/general/avada-scrollspy.js?ver=7.11.0" id="avada-scrollspy-js"></script>
+<script type="text/javascript" id="fusion-responsive-typography-js-extra">
+/* <![CDATA[ */
+var fusionTypographyVars = {"site_width":"1170px","typography_sensitivity":"1","typography_factor":"1.50","elements":"h1, h2, h3, h4, h5, h6"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/includes/lib/assets/min/js/general/fusion-responsive-typography.js?ver=3.11.0" id="fusion-responsive-typography-js"></script>
+<script type="text/javascript" id="fusion-scroll-to-anchor-js-extra">
+/* <![CDATA[ */
+var fusionScrollToAnchorVars = {"content_break_point":"800","container_hundred_percent_height_mobile":"0","hundred_percent_scroll_sensitivity":"450"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/includes/lib/assets/min/js/general/fusion-scroll-to-anchor.js?ver=3.11.0" id="fusion-scroll-to-anchor-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/themes/Avada/includes/lib/assets/min/js/general/fusion-general-global.js?ver=3.11.0" id="fusion-general-global-js"></script>
+<script type="text/javascript" id="fusion-video-js-extra">
+/* <![CDATA[ */
+var fusionVideoVars = {"status_vimeo":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/plugins/fusion-builder/assets/js/min/general/fusion-video.js?ver=3.11.0" id="fusion-video-js"></script>
+<script type="text/javascript" src="https://morganfpro.wpenginepowered.com/wp-content/plugins/fusion-builder/assets/js/min/general/fusion-column.js?ver=3.11.0" id="fusion-column-js"></script>
+
+
+
+
+<script>
+window.addEventListener('scroll', function () {
+    const topBar = document.querySelector('.top-bar');
+    const scrollPos = window.scrollY;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    
+    // Calculate the rotation for a left-to-right motion
+    const rotation = (scrollPos / maxScroll) * 45; // Rotate up to 45 degrees right
+    topBar.style.transform = `rotate(${rotation}deg)`; // Clockwise rotation
+});
+
+
+
+
+$().ready(function(){
+        $('[rel="tooltip"]').tooltip();
+
+    });
+
+    function rotateCard(btn){
+        var $card = $(btn).closest('.card-container');
+        console.log($card);
+        if($card.hasClass('hover')){
+            $card.removeClass('hover');
+        } else {
+            $card.addClass('hover');
+        }
+    }
+
+    </script>
+</body>
+</html>

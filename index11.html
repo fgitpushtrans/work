@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecovis Clark Jacobs</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 4em;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .team-section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .download-section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .footer {
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+        .footer h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer p, .footer a {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="container-fluid hero">
+    <img src="your-hero-image.jpg" alt="Hero Image">
+    <div class="hero-text">
+        SOLVE. GROW.
+    </div>
+</div>
+
+<!-- Services Section -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="service1.jpg" alt="Service 1" class="img-responsive">
+            <h3>Expanding into Australia?</h3>
+            <p>What you need to know.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="service2.jpg" alt="Service 2" class="img-responsive">
+            <h3>Medical, Dental or Allied Health Professionals?</h3>
+            <p>We are the expert advisers to your profession.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="service3.jpg" alt="Service 3" class="img-responsive">
+            <h3>Run a Business?</h3>
+            <p>We can help you grow it, manage your tax, and protect what you have built.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Team Section -->
+<div class="container team-section">
+    <h2 class="text-center">Our Team</h2>
+    <div class="row">
+        <div class="col-md-3 team-member">
+            <img src="team1.jpg" alt="David Conley" class="img-responsive">
+            <h4>David Conley</h4>
+            <p>CEO</p>
+        </div>
+        <div class="col-md-3 team-member">
+            <img src="team2.jpg" alt="Heath Stewart" class="img-responsive">
+            <h4>Heath Stewart</h4>
+            <p>COO</p>
+        </div>
+        <div class="col-md-3 team-member">
+            <img src="team3.jpg" alt="Elissa Lippiatt" class="img-responsive">
+            <h4>Elissa Lippiatt</h4>
+            <p>CTO</p>
+        </div>
+        <div class="col-md-3 team-member">
+            <img src="team4.jpg" alt="Jakin Lake" class="img-responsive">
+            <h4>Jakin Lake</h4>
+            <p>Managing Director</p>
+        </div>
+    </div>
+</div>
+
+<!-- Download Brochure Section -->
+<div class="container download-section">
+    <h2 class="text-center">Download Our Brochure</h2>
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <img src="brochure1.jpg" alt="Brochure 1" class="img-responsive">
+            <a href="#" class="btn btn-primary">Download</a>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="brochure2.jpg" alt="Brochure 2" class="img-responsive">
+            <a href="#" class="btn btn-primary">Download (Chinese)</a>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Sydney Office -->
+            <div class="col-md-3">
+                <h4>Sydney Office</h4>
+                <p>Level 2, Pier 2 & 3, 13 Hickson Road, Walsh Bay NSW 2000</p>
+                <p><a href="tel:+61292441111">+61 2 9244 1111</a></p>
+                <p><a href="mailto:sydney@ecovis.com">Email us</a></p>
+            </div>
+            <!-- Brisbane Office -->
+            <div class="col-md-3">
+                <h4>Brisbane Office</h4>
+                <p>1024 Ann Street, Fortitude Valley QLD 4006</p>
+                <p><a href="tel:+61736073892">+61 7 3607 3892</a></p>
+                <p><a href="mailto:brisbane@ecovis.com">Email us</a></p>
+            </div>
+            <!-- Perth Office -->
+            <div class="col-md-3">
+                <h4>Perth Office</h4>
+                <p>Level 5, 35 Outram St, West Perth, WA 6005</p>
+                <p><a href="tel:+61892241111">+61 8 9224 1111</a></p>
+                <p><a href="mailto:perth@ecovis.com">Email us</a></p>
+            </div>
+            <!-- Subscribe -->
+            <div class="col-md-3">
+                <h4>Stay in the Loop</h4>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email Address">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
